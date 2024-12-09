@@ -39,3 +39,7 @@ h1 {
 .recipe-rating {
   font-size: 14px;
 }
+.hero-section {
+  height: 100vh;
+  background-color: aliceblue;
+}
