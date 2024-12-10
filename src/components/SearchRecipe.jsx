@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SearchRecipe = () => {
   const [search, setSearch] = useState("");
@@ -12,15 +13,19 @@ const SearchRecipe = () => {
   }
 
   useEffect(() => {
+    if (search === "") {
+      setSearchedRecipes([]);
+      return;
+    }
     getSearchedRecipes();
   }, [search]);
 
   return (
     <div>
       <input type="search" onChange={(e) => setSearch(e.target.value)} />
-      <ol>
+      <ol style={{ display: "flex", flexDirection: "column" }}>
         {searchedRecipes.map((recipe) => {
-          return <li>{recipe.name}</li>;
+          return <Link to={`/recipe/${recipe.id}`}>{recipe.name}</Link>;
         })}
       </ol>
     </div>
