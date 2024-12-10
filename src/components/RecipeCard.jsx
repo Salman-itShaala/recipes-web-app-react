@@ -8,7 +8,6 @@ function CardComponent(props) {
       <p className="recipe-name">{props.name}</p>
       <p className="recipe-rating">Rating : {props.rating}</p>
       <p className="recipe-review-count">ReviewCount: {props.reviewCount}</p>
-      <Test />
     </Link>
   );
 }

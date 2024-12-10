@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CardComponent from "./RecipeCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <>
+      <Link to="search">Go to search page</Link>
       {/* <input type="text" onChange={(e) => setSearch(e.target.value)} /> */}
       <div className="hero-section"></div>
       <h1>Super Delicious</h1>
